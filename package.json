@@ -1,0 +1,25 @@
+{
+  "name": "ng-speech-recognition-demo",
+  "version": "1.1.1",
+  "description": "ng-speech-recognition-demo: An Ionic project",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "IIS"
+}

@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+.button {
+    border-color: #ccc !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+    min-width: 52px;
+    min-height: 17px !important;
+    font-size: 12px;
+    line-height: 10px !important;
+}
+
+.item-text-wrap{
+	padding: 0px;
+}
+
+.scroll, .row {
+	padding: 0px;
+	height: 100%;
+}
+
+.button.button-block, .button.button-full {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.scroll.padding{
+	transform: translate3d(0px, -1px, 0px) scale(1) !important;	
+}
