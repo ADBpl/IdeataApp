@@ -65,6 +65,7 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 										if(res.displayText){
 											console.log("res.displayText : ",res.displayText);
 											$scope.transcriptResult = res.displayText;
+											$('.transcriptResult').html(res.displayText);
 										}						                
 						            }
 						        });
@@ -98,6 +99,7 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 						if(res.displayText){
 							console.log("res.displayText : ",res.displayText);
 							$scope.transcriptResult = res.displayText;
+							$('.transcriptResult').html(res.displayText);
 						}
 		             }
 			        });
