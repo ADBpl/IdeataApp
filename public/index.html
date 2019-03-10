@@ -70,7 +70,14 @@
        <div class = "col">
          <button   class="button button-block button-royal" ng-speech-recognition-start="" ng-speech-recognition-end="speech.displayTranscript()">Hold & Talk</button>
          <button  id="enterBtn" class="button button-block button-royal" ng-click="sendTextInput()">Run</button>
-       </div>
+       </div><br>
+    </div>
+    <div class="row">
+      <div class = "col col-100">
+        <div class="" style="height: 50px;">
+          <p ng-model="transcriptResult">{{transcriptResult}}</p>
+        </div>
+     </div>
     </div>
     </ion-content>
   </ion-pane>

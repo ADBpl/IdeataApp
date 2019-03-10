@@ -60,7 +60,10 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 									data: obj,
 									type: 'POST',
 						            success: function(res) {
-						                console.log(res);						                
+										console.log(res);
+										if(res.displayText){
+											$scope.transcriptResult = res.displayText;
+										}						                
 						            }
 						        });
 								if (typeof $rootScope.transcript === 'string') {
@@ -89,7 +92,10 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 					data: obj,
 					type: 'POST',
 		            success: function(res) {
-		                console.log(res);
+						console.log(res);
+						if(res.displayText){
+							$scope.transcriptResult = res.displayText;
+						}
 		             }
 			        });
 
