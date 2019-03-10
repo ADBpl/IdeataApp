@@ -10,7 +10,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "body-parser": "^1.15.0"
   },
   "repository": {
     "type": "git",
