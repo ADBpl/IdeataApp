@@ -19,6 +19,7 @@ app.listen(process.env.PORT || 8000, function(req, res) {
 
 
 app.post("/echo", function(req, res) {
+  console.log("request : ",req.body);
   var speech =
     req.body.result &&
     req.body.result.parameters &&
