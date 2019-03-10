@@ -12,6 +12,7 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 			recognition.continuous = true;
 			recognition.interimResults = false;
 
+			$scope.transcriptResult = "Result ------";
 			//Change the recognition language here.
 			recognition.lang = 'en-GB';
 
@@ -62,6 +63,7 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 						            success: function(res) {
 										console.log(res);
 										if(res.displayText){
+											console.log("res.displayText : ",res.displayText);
 											$scope.transcriptResult = res.displayText;
 										}						                
 						            }
@@ -94,6 +96,7 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 		            success: function(res) {
 						console.log(res);
 						if(res.displayText){
+							console.log("res.displayText : ",res.displayText);
 							$scope.transcriptResult = res.displayText;
 						}
 		             }
