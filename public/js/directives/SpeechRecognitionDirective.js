@@ -48,9 +48,16 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 							if (event.results[0][0].transcript !== undefined) {
 								$rootScope.transcript = event.results[0][0].transcript;
 								$rootScope.textInput  = $rootScope.transcript;
+								var obj = {
+									result:{
+										parameters:{
+											echoText:$rootScope.textInput
+										}
+									}
+								}
 								$.ajax({
 									url: "https://chatbot-ind.herokuapp.com/echo",
-									data: {result:$rootScope.transcript},
+									data: obj,
 									type: 'POST',
 						            success: function(res) {
 						                console.log(res);						                
@@ -69,10 +76,17 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 
 			$scope.sendTextInput = function(){
 				console.log($scope.textInput);
+				var obj = {
+					result:{
+						parameters:{
+							echoText:$scope.textInput
+						}
+					}
+				}
 				if($scope.textInput){
 					$.ajax({
 		            url: "https://chatbot-ind.herokuapp.com/echo",
-					data: {result:$rootScope.transcript},
+					data: obj,
 					type: 'POST',
 		            success: function(res) {
 		                console.log(res);
