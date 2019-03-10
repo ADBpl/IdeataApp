@@ -49,12 +49,11 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 								$rootScope.transcript = event.results[0][0].transcript;
 								$rootScope.textInput  = $rootScope.transcript;
 								$.ajax({
-						            url: "https://alexa.ideata.co/getIdeata?query=" + $rootScope.transcript,
-						            type: 'GET',
+									url: "https://chatbot-ind.herokuapp.com/app",
+									data: {result:$rootScope.transcript},
+									type: 'POST',
 						            success: function(res) {
-						                console.log(res);
-						                // alert(res);
-						                // $('.resMsg').html(res.msg)
+						                console.log(res);						                
 						            }
 						        });
 								if (typeof $rootScope.transcript === 'string') {
@@ -72,11 +71,11 @@ angular.module('app.directives', []).directive('ngSpeechRecognitionStart', funct
 				console.log($scope.textInput);
 				if($scope.textInput){
 					$.ajax({
-		            url: "https://alexa.ideata.co/getIdeata?query=" + $scope.textInput,
-		            type: 'GET',
+		            url: "https://chatbot-ind.herokuapp.com/app",
+					data: {result:$rootScope.transcript},
+					type: 'POST',
 		            success: function(res) {
 		                console.log(res);
-		              	// $('.resMsg').html(res.msg)
 		             }
 			        });
 
